@@ -10,6 +10,7 @@ gem 'rack-cors'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 group :development, :test do
+  gem 'coveralls', require: false
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
