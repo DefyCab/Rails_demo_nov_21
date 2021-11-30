@@ -1,6 +1,6 @@
 describe 'GET /api/articles' do
   subject { response }
-  let!(:article) { create(:article, title: "My own title") }
+  let!(:article) { create(:article, title: "Very exiting title") }
 
   before do
     get '/api/articles'
@@ -10,7 +10,7 @@ describe 'GET /api/articles' do
     expect(subject.status).to eq 200
   end
 
-  it 'is expected to respond with an empyt array' do
-    expect(response_json.first['title']).to eq 'My own title'
+  it 'is expected to respond with a title' do
+    expect(response_json.first['title']).to eq 'Very exiting title'
   end
 end
