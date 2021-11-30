@@ -1,5 +1,5 @@
 unless Rails.env.production?
-  require 'rpsec/core/rake_task'
+  require 'rspec/core/rake_task'
   require 'coveralls/rake/task'
 
   Coveralls::RakeTask.new
