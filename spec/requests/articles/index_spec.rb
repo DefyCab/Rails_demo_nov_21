@@ -3,7 +3,7 @@ describe 'GET /api/articles' do
   let!(:article) { create(:article, title: "Very exiting title") }
 
   before do
-    get '/api/articles'
+    get '/api/articles/'
   end
 
   it 'is expected to respond with status 200' do
@@ -11,6 +11,6 @@ describe 'GET /api/articles' do
   end
 
   it 'is expected to respond with a title' do
-    expect(response_json.first['title']).to eq 'Very exiting title'
+    expect(response_json['articles'].first['title']).to eq 'Very exiting title'
   end
 end

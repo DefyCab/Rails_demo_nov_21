@@ -32,6 +32,16 @@ describe 'POST /api/articles' do
     end
 
     describe 'unsuccessfully' do
+      before do
+        post '/api/articles',
+             params: {
+               article: {
+                 #  title: 'Lets go',
+                 content: 'Once upon a time in a galaxy far away...'
+               }
+             }
+      end
+
       describe 'due to missing title' do
         it { is_expected.to have_http_status 422 }
 
