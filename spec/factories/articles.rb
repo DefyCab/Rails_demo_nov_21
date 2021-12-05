@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    title { "Very exiting title" }
-    content { "Once upon a time in a universe far away..." }
+    title { "Title" }
+    content { "Lorem ipsum hello where there..." }
   end
 end
